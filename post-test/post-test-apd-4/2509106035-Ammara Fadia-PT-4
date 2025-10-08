@@ -1,0 +1,47 @@
+NamaPanggilan = "Ameng"
+NIMAseli = "035"
+
+#login
+percobaan = 0
+maksimal = 5
+while percobaan < maksimal:
+    
+    Nama = (input("Masukkan Nama Anda: "))
+    NIM = (input("Masukkan NIM anda: "))
+    if Nama == NamaPanggilan and  NIM == NIMAseli:
+        percobaan = maksimal
+        print(f'Selamat datang {Nama}, silahkan ke tahap selanjutnya!')
+        break  
+
+    else:
+        percobaan += 1
+        sisapercobaan = maksimal - percobaan
+        if sisapercobaan > 0:
+            print(f"Silahkan coba lagi")
+        else:
+            print("Coba lagi dalam beberapa saat")
+            exit()
+
+pilihan = (input("\nApakah anda ingin merental mobil?(ya/tidak)"))
+if pilihan == "ya":
+
+    usia = int(input("Masukkan usia anda: "))
+    SIM = input("Apakah anda punya SIM A? (ya/tidak): ")
+    deposit = int(input("Masukkan deposit anda (minimal 500000): "))
+    pengalaman = int(input("Berapa tahun pengalaman anda mengemudi (harus berupa angka): "))
+
+    if usia < 21:
+        print("Tolak: Usia tidak mencukupi")
+    elif SIM == "tidak":
+        print("Tolak: Tidak memiliki sim A")
+    elif deposit < 500000:
+        print("Tolak: Deposit tidak mencukupi")
+    elif pengalaman < 4:
+        print("Setujui untuk mobil standar saja")
+    else:
+        print("Setujui untuk semua jenis mobil")
+
+elif pilihan == "tidak":
+    print("Hati-hati di jalan")
+else:
+    print("Tidak valid!")
