@@ -45,3 +45,8 @@ elif pilihan == "tidak":
     print("Hati-hati di jalan")
 else:
     print("Tidak valid!")
+
+import os
+
+# Clearing the Screen
+os.system('cls')
