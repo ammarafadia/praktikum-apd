@@ -152,7 +152,6 @@ def edit_movie():
             film = movies[index]
             print(f"\nEdit film: {film['judul']}")
             
-            # Panggil Prosedur Lokal
             update_judul(film)
             update_genre(film)
             update_tahun(film)
